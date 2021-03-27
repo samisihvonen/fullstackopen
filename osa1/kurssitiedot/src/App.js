@@ -1,7 +1,5 @@
 import React from 'react'
-import Content from './Content'
-import Header from './Header'
-import Total from './Total'
+import Course from './Course'
 
 const App = () => {
   const course = {
@@ -24,9 +22,7 @@ const App = () => {
 
   return (
     <div>
-      <Header course={course.name} />
-      <Content parts={course.parts} />
-      <Total parts={course.parts} />
+      <Course course={course} />
     </div>
   )
 }
