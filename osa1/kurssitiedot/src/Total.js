@@ -1,11 +1,16 @@
 import React from 'react'
 
-const Total = ({ course }) => {
-  const sum = course.parts.reduce(
-    (previous, next) => previous + next.exercises,
-    0
+const Total = (props) => {
+  return (
+    <>
+      <p>
+        Number of Exercises:{' '}
+        {props.parts[0].exercises +
+          props.parts[1].exercises +
+          props.parts[2].exercises}
+      </p>
+    </>
   )
-  return <p>Total of {sum} exercises</p>
 }
 
 export default Total
